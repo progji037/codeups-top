@@ -1,0 +1,162 @@
+@use "global" as *;
+
+.price__wrapper {
+  padding-top: rem(80);
+  padding-bottom: rem(84);
+  background-color: #ddf0f1;
+
+  @include mq("md") {
+    padding-top: rem(100);
+    padding-bottom: rem(105);
+    position: relative;
+  }
+}
+
+.price__inner {
+  padding-left: rem(15);
+  padding-right: rem(15);
+
+  @include mq("md") {
+    max-width: rem(1077);
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.price__header {
+  text-align: center;
+  @include mq("md") {
+    padding-right: rem(5);
+  }
+}
+
+.price__content {
+  padding-top: rem(28);
+  // margin-top: rem(28);
+
+  @include mq("md") {
+    padding-top: rem(40);
+    display: flex;
+    flex-direction: row-reverse;
+    // margin-top: rem(41);
+  }
+}
+
+.price__image {
+  @include mq("md") {
+    width: calc(492 / 1077 * 100%);
+    margin-left: rem(93);
+  }
+}
+
+.price__lists {
+  margin-top: rem(40);
+  @include mq("md") {
+    width: calc(492 / 1077 * 100%);
+    margin-top: 0;
+  }
+}
+.price__list:not(:first-child) {
+  margin-top: rem(39);
+}
+
+.price__list-title {
+  font-weight: 700;
+  line-height: calc(24 / 16);
+  padding-bottom: rem(4);
+  border-bottom: solid 1px $green-blue;
+
+  @include mq("md") {
+    padding-bottom: rem(3);
+  }
+}
+
+.price__costs {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq("md") {
+    justify-content: space-between;
+  }
+}
+
+.price__costs dt {
+  font-size: rem(14);
+  padding-top: rem(8);
+  // margin-top: rem(8);
+  line-height: calc(24 / 14);
+  width: calc(253 / 345 * 100%);
+  @include mq("md") {
+    font-size: rem(16);
+    width: calc(300 / 492 * 100%);
+    line-height: calc(24 / 16);
+    padding-top: rem(6);
+    // margin-top: rem(6);
+  }
+}
+
+.price__costs dd {
+  font-size: rem(14);
+  padding-top: rem(8);
+  // margin-top: rem(8);
+  line-height: calc(24 / 14);
+  width: calc(92 / 345 * 100%);
+  text-align: right;
+
+  @include mq("md") {
+    font-size: rem(16);
+    width: calc(100 / 492 * 100%);
+    line-height: calc(24 / 16);
+  }
+}
+
+.price__list:nth-of-type(1) dt {
+  @include mq("md") {
+    padding-top: rem(8);
+  }
+}
+.price__list:nth-of-type(2) dt {
+  @include mq("md") {
+    padding-top: rem(8);
+  }
+}
+
+.price__list:nth-of-type(3) dt {
+  @include mq("md") {
+    padding-top: rem(8.5);
+  }
+}
+
+.price__list:nth-of-type(4) dt {
+  @include mq("md") {
+    padding-top: rem(8);
+  }
+}
+.price__list:nth-of-type(4) .price__list-title{
+  @include mq("md") {
+    padding-top: rem(2);
+  }
+}
+
+.price__link {
+  padding-top: rem(40);
+  text-align: center;
+  // margin-top: rem(40);
+  // padding-right: rem(3);
+
+  @include mq("md") {
+    padding-top: rem(75);
+    // margin-top: rem(77);
+  }
+}
+
+.price__decoration {
+  display: none;
+  @include mq("md") {
+    display: inline-block;
+    position: absolute;
+    width: rem(437);
+    bottom: rem(60);
+    left: rem(100);
+  }
+}
