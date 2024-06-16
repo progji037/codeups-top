@@ -1,9 +1,11 @@
 @use "global" as *;
 
 .campaign__wrapper {
-  padding-top: rem(40);
+  margin-top: rem(40);
+  // padding-top: rem(40);
   @include mq("md") {
-    padding-top: rem(120);
+    margin-top: rem(120);
+    // padding-top: rem(120);
   }
 }
 
