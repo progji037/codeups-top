@@ -13,6 +13,8 @@
     content: "";
     position: absolute;
     width: 100%;
+    aspect-ratio: 1440/500;
+    object-fit: cover;
     height: rem(500);
     background-image: url(/assets/images/common/blog-pc-back.jpg);
     background-size: contain;
@@ -26,11 +28,11 @@
   padding-right: rem(21);
 
   @include mq("md") {
-    max-width: rem(1080);
+    max-width: $inner;
     width: 100%;
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: rem(25);
+    padding-right: rem(25);
   }
 }
 
