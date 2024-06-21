@@ -128,6 +128,10 @@
   padding-left: rem(21);
 }
 
+.header-campaign__list:hover {
+  opacity: 0.5;
+}
+
 .header__information {
   margin-top: rem(34);
 }
@@ -143,6 +147,11 @@
   margin-left: rem(3);
 }
 
+
+.header__about:hover{
+  opacity: 0.5;
+}
+
 .header-information__list-head {
   display: flex;
   align-items: center;
@@ -150,6 +159,10 @@
 
 .header-information__list-head a {
   margin-left: rem(3);
+}
+
+.header-information__list:hover {
+  opacity: 0.5;
 }
 
 .header-information__list:not(:first-child) {
@@ -165,6 +178,10 @@
 .header__blog-link {
   display: flex;
   align-items: center;
+}
+
+.header__blog-link:hover {
+  opacity: 0.5;
 }
 
 .header__blog span {
@@ -235,13 +252,10 @@
   flex-direction: column;
 }
 
-.header-faq__list:nth-of-type(2) img{
+.header-faq__list:nth-of-type(2) img {
   margin-bottom: rem(18);
 }
-
 
 .header-faq__list:not(:first-child) {
   padding-top: rem(36);
 }
-
-

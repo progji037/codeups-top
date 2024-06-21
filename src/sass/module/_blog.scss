@@ -26,6 +26,9 @@
 .blog__inner {
   padding-left: rem(21);
   padding-right: rem(21);
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
 
   @include mq("md") {
     max-width: $inner;
@@ -60,6 +63,10 @@
   }
 }
 
+.blog__card a:hover{
+  opacity: 0.5;
+}
+
 .blog__card {
   margin-top: rem(28);
   padding-top: rem(16);
@@ -81,7 +88,9 @@
   }
 }
 
-.blog-card__figure {
+.blog-card__figure img {
+  aspect-ratio: 301/201;
+  object-fit: cover;
 }
 
 .blog-card__header {
@@ -144,4 +153,3 @@
     margin-top: rem(80);
   }
 }
-

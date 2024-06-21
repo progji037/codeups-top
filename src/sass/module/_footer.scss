@@ -106,7 +106,8 @@
   align-items: center;
 }
 
-.footer-campaign__list-head {
+.footer-campaign__list:hover a {
+  opacity: 0.5;
 }
 
 .footer-campaign__list-head span {
@@ -156,6 +157,10 @@
   }
 }
 
+.footer__about:hover a {
+  opacity: 0.5;
+}
+
 .footer__about p {
   margin-left: rem(3);
 }
@@ -185,6 +190,10 @@
   }
 }
 
+.footer-information__list:hover a {
+  opacity: 0.5;
+}
+
 .footer__blog {
   display: flex;
   align-items: center;
@@ -192,8 +201,9 @@
   font-weight: 700;
 }
 
-// .footer__blog-link {
-// }
+.footer__blog-link :hover {
+  opacity: 0.5;
+}
 
 .footer__blog span {
   padding-left: rem(3);
@@ -218,6 +228,10 @@
 
 .footer__voice-link span {
   padding-left: rem(3);
+}
+
+.footer__voice:hover a {
+  opacity: 0.5;
 }
 
 .footer__price {
@@ -256,6 +270,10 @@
   }
 }
 
+.footer-price__list:hover a {
+  opacity: 0.5;
+}
+
 .footer__faq {
   margin-top: rem(34);
 
@@ -273,6 +291,10 @@
 
 .footer-faq__list span {
   padding-left: rem(3);
+}
+
+.footer-faq__list:hover a{
+  opacity: 0.5;
 }
 
 .footer-faq__list:not(:first-child) {

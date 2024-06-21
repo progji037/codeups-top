@@ -15,6 +15,9 @@
 .price__inner {
   padding-left: rem(15);
   padding-right: rem(15);
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
 
   @include mq("md") {
     max-width: rem(1077);
@@ -46,6 +49,14 @@
   @include mq("md") {
     width: calc(492 / 1077 * 100%);
     margin-left: rem(93);
+  }
+}
+
+.price__image img {
+  aspect-ratio: 345/227;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 492/746;
   }
 }
 
@@ -132,7 +143,7 @@
     padding-top: rem(8);
   }
 }
-.price__list:nth-of-type(4) .price__list-title{
+.price__list:nth-of-type(4) .price__list-title {
   @include mq("md") {
     padding-top: rem(2);
   }
