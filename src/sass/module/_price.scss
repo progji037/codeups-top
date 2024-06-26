@@ -20,9 +20,9 @@
   margin: 0 auto;
 
   @include mq("md") {
-    max-width: rem(1077);
-    margin: 0 auto;
-    padding: 0;
+    max-width: $inner;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -41,14 +41,14 @@
     padding-top: rem(40);
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     // margin-top: rem(41);
   }
 }
 
 .price__image {
   @include mq("md") {
-    width: calc(492 / 1077 * 100%);
-    margin-left: rem(93);
+    max-width: rem(492);
   }
 }
 
@@ -63,8 +63,8 @@
 .price__lists {
   margin-top: rem(40);
   @include mq("md") {
-    width: calc(492 / 1077 * 100%);
     margin-top: 0;
+    max-width: rem(492);
   }
 }
 .price__list:not(:first-child) {
@@ -156,7 +156,7 @@
   // padding-right: rem(3);
 
   @include mq("md") {
-    padding-top: rem(75);
+    padding-top: rem(80);
     // margin-top: rem(77);
   }
 }
@@ -168,6 +168,6 @@
     position: absolute;
     width: rem(437);
     bottom: rem(60);
-    left: rem(100);
+    left: calc(50% - min(43%, 39rem));
   }
 }

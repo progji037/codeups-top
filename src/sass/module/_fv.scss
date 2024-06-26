@@ -2,31 +2,51 @@
 
 .fv__wrapper {
   height: 100vh;
-  position: relative;
-  @include mq('md') {
   // height: 100%;
+
+  position: relative;
+  @include mq("md") {
   }
 }
 
-.swiper {
+// .fv__inner{
+//   height: inherit;
+// }
+
+.swiper2 {
   width: 100%;
-  height: 100%;
+  // height: inherit;
+}
+
+.fv-slide-wapper {
+    animation: delayFade 11s forwards;
+}
+
+@keyframes delayFade {
+  0%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fv-slide-image img {
+  width: 100%;
+  height: 100vh;
+  aspect-ratio: 1440/768;
+  object-fit: cover;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .fv__title {
@@ -35,16 +55,40 @@
   top: 43%;
   left: 53%;
   transform: translateX(-50%);
-  color: #ffffff;
+  // color: #ffffff;
   text-align: center;
-  z-index: 15;
+  z-index: 21;
+  color: #408f95;
+  animation: fadeInOut 10s forwards; /* 7秒から10秒に変更 */
 
   @include mq("md") {
     top: 50%;
     left: 50%;
     transform: translate(-46%, -53%);
+    opacity: 0;
   }
 }
+
+@keyframes fadeInOut {
+  0%, 10% {
+    opacity: 0;
+  }
+  20%, 30% {
+    opacity: 1;
+  }
+  40%, 70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+    color: #ffffff;
+  }
+  100% {
+    opacity: 1; /* テキストを表示したままにする */
+    color: #ffffff;
+  }
+}
+
 
 .fv__main-title {
   //   padding-left: rem(20);

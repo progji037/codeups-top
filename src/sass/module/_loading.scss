@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.fv__loading {
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* 追加 */
+  animation: out 10s forwards;
+  z-index: 20;
+}
+
+@keyframes out {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+}
+100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.fv-loading__body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.fv-loading__container {
+  position: relative;
+  height: inherit;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  animation: containerFade 10s forwards; /* 新しいアニメーション */
+}
+
+@keyframes containerFade {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  40%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.fv-loading__split {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fv-loading__split img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fv-loading__split img.active {
+  animation: slideIn 3s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+.fv-loading__split.right img.active {
+  animation-delay: 3.5s;
+}

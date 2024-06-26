@@ -120,8 +120,7 @@
     display: block;
     max-width: rem(194);
     position: absolute;
-    right: rem(180);
     bottom: rem(75);
-    transform: translateX(50%);
+    right: calc(50% - min(44.2%, 40rem));
   }
 }

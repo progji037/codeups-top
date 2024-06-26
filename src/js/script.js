@@ -8,6 +8,13 @@ jQuery(function ($) {
       $(this).addClass("active");
       $(".header-drawer__menu").addClass("open");
     }
+    // ウィンドウのリサイズを監視し、幅が768px以上の場合はドロワーメニューを閉じる
+  $(window).on("resize", function () {
+    if ($(window).width() > 767) {
+      $(".header__drawer").removeClass("active");
+      $(".header-drawer__menu").removeClass("open");
+    }
+  });
   });
 });
 
@@ -102,4 +109,22 @@ box.each(function(){
             counter = 1;
           }
      });
+});
+
+
+// loading animation
+$(document).ready(function () {
+  const leftSlides = $(".fv-loading__split.left .slide");
+  const rightSlides = $(".fv-loading__split.right .slide");
+  const totalSlides = leftSlides.length;
+  let currentIndex = 0;
+
+
+  // 最初のスライドを表示
+  $(leftSlides[currentIndex]).addClass("active");
+  $(rightSlides[currentIndex]).addClass("active");
+
+  setTimeout(() => {
+    field.fadeOut(1000);
+  }, 10000); // 10秒後に全体をフェードアウト
 });

@@ -130,13 +130,13 @@
               <div class="header-campaign__items">
                 <ul class="header-campaign__lists">
                   <li class="header-campaign__list header-campaign__list-title">
-                    <h3 class="header-campaign__list-head">
+                    <div class="header-campaign__list-head">
                       <img
                         src="./assets/images/common/ヒトデ-sp.png"
                         alt="ヒトデ"
                       />
                       <a href=""> <span>キャンペーン</span></a>
-                    </h3>
+                    </div>
                   </li>
                   <li class="header-campaign__list">
                     <a href="">ライセンス取得</a>
@@ -161,10 +161,10 @@
               <div class="header-information__items">
                 <ul class="header-information__lists">
                   <li class="header-information__list">
-                    <h3 class="header-information__list-head">
+                    <div class="header-information__list-head">
                       <img src="./assets/images/common/ヒトデ-sp.png" alt="" />
                       <a href=""> <span>ダイビング情報</span></a>
-                    </h3>
+                    </div>
                   </li>
                   <li class="header-information__list">
                     <a href="">ライセンス講習</a>
@@ -197,12 +197,12 @@
               <div class="header-price__items">
                 <ul class="header-price__lists">
                   <li class="header-price__list">
-                    <h3 class="header-price__list-head">
+                    <div class="header-price__list-head">
                       <img src="./assets/images/common/ヒトデ-sp.png" alt="" />
                       <a href="">
                         <span>料金一覧</span>
                       </a>
-                    </h3>
+                    </div>
                   </li>
                   <li class="header-price__list">
                     <a href="">ライセンス講習</a>
@@ -257,14 +257,53 @@
     <main>
       <section class="fv">
         <div class="fv__wrapper">
+          <!-- <div class="fv__inner"> -->
           <div class="fv__title">
             <h1 class="fv__main-title">DIVING</h1>
             <p class="fv__sub-title">into the ocean</p>
           </div>
+          <!--  -->
+          <div class="fv__loading fv-loading">
+            <div class="fv-loading__body">
+              <div class="fv-loading__container">
+                <div class="fv-loading__split left">
+                  <picture>
+                    <source
+                      srcset="./assets/images/common/mv-split1.webp"
+                      media="(min-width: 768px)"
+                    />
+                    <!-- 幅768px以上なら表示 -->
+                    <source
+                      srcset="./assets/images/common/mv-sp-split1.webp"
+                      media="(max-width: 767px)"
+                    />
+                    <!-- 幅767px以下なら表示 -->
+                    <img src="./assets/images/common/mv-sp-split1.webp" alt="左側画像A" class="slide" />
+                  </picture>
+                </div>
+                <div class="fv-loading__split right">
+                  <picture>
+                    <source
+                      srcset="./assets/images/common/mv-split2.webp"
+                      media="(min-width: 768px)"
+                    />
+                    <!-- 幅768px以上なら表示 -->
+                    <source
+                      srcset="./assets/images/common/mv-sp-split2.webp"
+                      media="(max-width: 767px)"
+                    />
+                    <!-- 幅767px以下なら表示 -->
+                    <img src="./assets/images/common/mv-split2.webp" alt="右側画像A" class="slide" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
           <div class="swiper2 mySwiper2">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper fv-slide-wapper">
               <!-- 1 -->
-              <div class="swiper-slide">
+              <div class="swiper-slide fv-slide-image">
                 <picture>
                   <source
                     srcset="./assets/images/common/mv-pc.jpg"
@@ -280,7 +319,7 @@
                 </picture>
               </div>
               <!-- 2 -->
-              <div class="swiper-slide">
+              <div class="swiper-slide fv-slide-image">
                 <picture>
                   <source
                     srcset="./assets/images/common/fv-pc1.jpg"
@@ -296,7 +335,7 @@
                 </picture>
               </div>
               <!-- 3 -->
-              <div class="swiper-slide">
+              <div class="swiper-slide fv-slide-image">
                 <picture>
                   <source
                     srcset="./assets/images/common/fv-pc2.jpg"
@@ -312,7 +351,7 @@
                 </picture>
               </div>
               <!-- 4 -->
-              <div class="swiper-slide">
+              <div class="swiper-slide fv-slide-image">
                 <picture>
                   <source
                     srcset="./assets/images/common/fv-pc3.jpg"
@@ -329,6 +368,7 @@
               </div>
             </div>
           </div>
+          <!-- </div> -->
         </div>
       </section>
       <!-- fv -->
@@ -337,10 +377,10 @@
         <div class="campaign__wrapper">
           <div class="campaign__inner">
             <div class="campaign__title">
-              <h2 class="campaign__maintitle section__maintitle">Campaign</h2>
-              <div class="campaign__subtitle section__subtitle">
+              <div class="campaign__maintitle section__maintitle">Campaign</div>
+              <h2 class="campaign__subtitle section__subtitle">
                 キャンペーン
-              </div>
+              </h2>
             </div>
             <!-- swiper -->
             <div class="campaign-card__wrap">
@@ -353,13 +393,11 @@
                   <!-- slide1 -->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign1-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign1-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -380,17 +418,14 @@
                       </div>
                     </div>
                   </div>
-
                   <!-- slide2 -->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign2-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign2-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -417,13 +452,11 @@
                   <!-- slide3-->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign3-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign3-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -450,13 +483,11 @@
                   <!-- slide4-->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign4-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign4-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -479,17 +510,14 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- slide5 -->
+                  <!-- slide1 -->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign1-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign1-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -510,17 +538,14 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- slide6 -->
+                  <!-- slide2 -->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign2-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign2-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -544,16 +569,14 @@
                     </div>
                   </div>
 
-                  <!-- slide7-->
+                  <!-- slide3-->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign3-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign3-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -577,16 +600,14 @@
                     </div>
                   </div>
 
-                  <!-- slide8-->
+                  <!-- slide4-->
                   <div class="swiper-slide campaign__slide">
                     <div class="campaign__card campaign-card">
-                      <div class="campaign-card__figure">
-                        <div class="campaign-card__image">
-                          <img
-                            src="assets/images/common/campaign4-sp.jpg"
-                            alt=""
-                          />
-                        </div>
+                      <div class="campaign-card__image">
+                        <img
+                          src="assets/images/common/campaign4-sp.jpg"
+                          alt=""
+                        />
                       </div>
                       <div class="campaign-card__textbox">
                         <div class="campaign-card__header">
@@ -609,6 +630,7 @@
                       </div>
                     </div>
                   </div>
+                  <!--  -->
                 </div>
               </div>
             </div>
@@ -630,10 +652,10 @@
         <div class="about__wrapper">
           <div class="about__inner">
             <div class="about__title">
-              <h2 class="about__maintitle section__maintitle">About us</h2>
-              <div class="about__subtitle section__subtitle">
+              <div class="about__maintitle section__maintitle">About us</div>
+              <h2 class="about__subtitle section__subtitle">
                 私たちについて
-              </div>
+              </h2>
             </div>
             <div class="about__body">
               <div class="about__main-image">
@@ -709,15 +731,15 @@
         <div class="info__wrapper">
           <div class="info__inner">
             <div class="info__header">
-              <h2 class="info__title section__maintitle">Information</h2>
-              <div class="info__subtitle section__subtitle">ダイビング情報</div>
+              <div class="info__title section__maintitle">Information</div>
+              <h2 class="info__subtitle section__subtitle">ダイビング情報</h2>
             </div>
             <div class="info__contents">
               <div class="info__image colorbox">
                 <img src="./assets/images/common/info-ocean3-sp.jpg" alt="" />
               </div>
               <div class="info__textbox">
-                <h3 class="info__head">ライセンス講習</h3>
+                <div class="info__head">ライセンス講習</div>
                 <div class="info__text">
                   <p>
                     当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
@@ -750,8 +772,8 @@
               />
             </div>
             <div class="blog__header">
-              <h2 class="blog__title">Blog</h2>
-              <div class="blog__subtitle section__subtitle">ブログ</div>
+              <div class="blog__title">Blog</div>
+              <h2 class="blog__subtitle section__subtitle">ブログ</h2>
             </div>
             <!-- 1 -->
             <div class="blog__cards">
@@ -854,8 +876,8 @@
               />
             </div>
             <div class="voice__header">
-              <h2 class="voice__title section__maintitle">Voice</h2>
-              <div class="voice__subtitle section__subtitle">お客様の声</div>
+              <div class="voice__title section__maintitle">Voice</div>
+              <h2 class="voice__subtitle section__subtitle">お客様の声</h2>
             </div>
             <div class="voice__boxes">
               <!-- 1 -->
@@ -930,8 +952,8 @@
         <div class="price__wrapper">
           <div class="price__inner">
             <div class="price__header">
-              <h2 class="price__title section__maintitle">Price</h2>
-              <div class="price__subtitle section__subtitle">料金一覧</div>
+              <div class="price__title section__maintitle">Price</div>
+              <h2 class="price__subtitle section__subtitle">料金一覧</h2>
             </div>
             <div class="price__content">
               <div class="price__image">
@@ -1069,10 +1091,10 @@
               </div>
               <div class="contact__box">
                 <div class="contact__box-wrap">
-                  <h2 class="contact__title">Contact</h2>
-                  <div class="contact__sub-text">
+                  <div class="contact__title">Contact</div>
+                  <h2 class="contact__sub-text">
                     <p>お問い合わせ</p>
-                  </div>
+                  </h2>
                   <div class="contact__text-link">
                     <p>ご予約・お問い合わせはコチラ</p>
                   </div>
@@ -1123,9 +1145,9 @@
                       class="footer-campaign__list footer-campaign__list-title"
                     >
                       <img src="./assets/images/common/ヒトデ-sp.png" alt="" />
-                      <h3 class="footer-campaign__list-head">
+                      <div class="footer-campaign__list-head">
                         <a href=""> <span>キャンペーン</span></a>
-                      </h3>
+                      </div>
                     </li>
                     <li class="footer-campaign__list">
                       <a href="">ライセンス取得</a>
@@ -1150,13 +1172,13 @@
                 <div class="footer-information__items">
                   <ul class="footer-information__lists">
                     <li class="footer-information__list">
-                      <h3 class="footer-information__list-head">
+                      <div class="footer-information__list-head">
                         <img
                           src="./assets/images/common/ヒトデ-sp.png"
                           alt=""
                         />
                         <a href=""> <span>ダイビング情報</span></a>
-                      </h3>
+                      </div>
                     </li>
                     <li class="footer-information__list">
                       <a href="">ライセンス講習</a>
@@ -1189,7 +1211,7 @@
                 <div class="footer-price__items">
                   <ul class="footer-price__lists">
                     <li class="footer-price__list">
-                      <h3 class="footer-price__list-head">
+                      <div class="footer-price__list-head">
                         <img
                           src="./assets/images/common/ヒトデ-sp.png"
                           alt=""
@@ -1197,7 +1219,7 @@
                         <a href="">
                           <span>料金一覧</span>
                         </a>
-                      </h3>
+                      </div>
                     </li>
                     <li class="footer-price__list">
                       <a href="">ライセンス講習</a>

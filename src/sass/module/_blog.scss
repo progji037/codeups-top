@@ -17,9 +17,10 @@
     object-fit: cover;
     height: rem(500);
     background-image: url(/assets/images/common/blog-pc-back.jpg);
-    background-size: contain;
+    background-size: cover;
     top: 0;
     z-index: -1;
+
   }
 }
 
@@ -31,11 +32,11 @@
   margin: 0 auto;
 
   @include mq("md") {
-    max-width: $inner;
+    max-width: rem(1182);
     width: 100%;
     margin: 0 auto;
-    padding-left: rem(25);
-    padding-right: rem(25);
+    // padding-left: rem(25);
+    // padding-right: rem(25);
   }
 }
 
@@ -44,10 +45,10 @@
   @include mq("md") {
     display: inline-block;
     position: absolute;
-    top: 25px;
-    left: 100px;
+    top: rem(25);
     max-width: rem(437);
     width: 100%;
+    left: calc(50% - min(43%, 39rem));
   }
 }
 
@@ -58,12 +59,15 @@
 .blog__cards {
   @include mq("md") {
     display: flex;
-    gap: rem(40);
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: rem(40);
+    column-gap: rem(40);
     margin-top: rem(80);
   }
 }
 
-.blog__card a:hover{
+.blog__card a:hover {
   opacity: 0.5;
 }
 
@@ -78,6 +82,8 @@
 
   @include mq("md") {
     margin-top: 0;
+    max-width: rem(333);
+    width: 100%;
   }
 }
 
