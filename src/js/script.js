@@ -32,6 +32,7 @@ const swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
+
 /* .campaign
 -------------------------------------------------------------*/
 
@@ -128,3 +129,25 @@ $(document).ready(function () {
     field.fadeOut(1000);
   }, 10000); // 10秒後に全体をフェードアウト
 });
+
+/* .loading fadeout
+-------------------------------------------------------------*/// script.js
+
+$(document).ready(function() {
+  // フェードアウトさせる要素を取得
+  var $targetElement = $('.fade-out-target');
+
+  // 指定の秒数（ミリ秒）後にフェードアウトさせる
+  var delay = 3000; // 3000ミリ秒（3秒）
+
+  setTimeout(function() {
+    $targetElement.addClass('fade-out');
+
+    // フェードアウト後に非表示にする
+    setTimeout(function() {
+      $targetElement.hide();
+    }, 7000); // フェードアウトアニメーションの時間と同じにする
+  }, delay);
+});
+
+
