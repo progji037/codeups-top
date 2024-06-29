@@ -56,7 +56,7 @@
   left: 53%;
   transform: translateX(-50%);
   text-align: center;
-  z-index: 20;
+  z-index: 19;
   color: #408f95;
   animation: fadeInOut 10s forwards; /* 7秒から10秒に変更 */
 
@@ -124,7 +124,7 @@
   height: 100vh;
   overflow: hidden; /* 追加 */
   animation: out 10s forwards;
-  z-index: 19;
+  z-index: 18;
 }
 
 @keyframes out {

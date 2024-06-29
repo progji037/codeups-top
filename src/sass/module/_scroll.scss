@@ -11,7 +11,7 @@
   border: solid 1px #408f95;
   border-radius: 50%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 25;
+  z-index: 19;
 
   @include mq("md") {
     width: rem(80);

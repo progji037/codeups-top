@@ -5,11 +5,11 @@
 .header__drawer {
   position: fixed;
   width: rem(32);
-  height: rem(25);
+  height: inherit;
   display: inline-block;
   top: 0;
   right: 0;
-  z-index: 30;
+  z-index: 31;
   margin-top: rem(28);
   margin-right: rem(15);
   @include mq("md") {
@@ -62,7 +62,7 @@
   padding-top: rem(21);
   top: 0;
   right: 0;
-  z-index: 28;
+  z-index: 30;
   transition: all 0.5s;
 }
 
