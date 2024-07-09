@@ -18,6 +18,27 @@ jQuery(function ($) {
   });
 });
 
+/* .ドロワーの後ろがスクロールされない
+-------------------------------------------------------------*/
+$(function () {
+  // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+  $(".header__drawer").click(function () {
+
+    // 現在のbodyタグのoverflowスタイルを確認
+    if ($("body").css("overflow") === "hidden") {
+
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+
+    } else {
+
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+
+    }
+  });
+});
+
 /* .fv
 -------------------------------------------------------------*/
 
@@ -41,7 +62,6 @@ const swiper1 = new Swiper(".js-top-swiper", {
   spaceBetween: 24,
   loop: true,
   speed: 2000,
-  // centeredSlides: true,
   autoplay: {
     // 自動再生
     delay: 1500, // 1.5秒後に次のスライド
@@ -125,9 +145,6 @@ $(document).ready(function () {
   $(leftSlides[currentIndex]).addClass("active");
   $(rightSlides[currentIndex]).addClass("active");
 
-  setTimeout(() => {
-    field.fadeOut(1000);
-  }, 10000); // 10秒後に全体をフェードアウト
 });
 
 /* .loading fadeout

@@ -1,4 +1,10 @@
 @use "global" as *;
+.footer {
+  margin-top: rem(105);
+  @include mq("md") {
+    margin-top: rem(152);
+  }
+}
 
 .footer__wrapper {
   background-color: $green-blue;
@@ -13,13 +19,13 @@
 }
 
 .footer__inner {
-  padding-left: rem(15);
+  // padding-left: rem(15);
 
   @include mq("md") {
-    max-width: rem(1080);
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 0;
+    // max-width: rem(1080);
+    // width: 100%;
+    // margin: 0 auto;
+    // padding-left: 0;
   }
 }
 
@@ -61,12 +67,15 @@
 .footer__menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   color: $white;
-  padding-top: rem(38);
+  margin-top: rem(38);
+  // padding-top: rem(38);
 
   @include mq("md") {
     flex-wrap: nowrap;
-    padding-top: rem(22);
+    margin-top: rem(22);
+    justify-content: left;
   }
 }
 
@@ -116,10 +125,12 @@
 
 .footer-campaign__list:not(:first-child) {
   margin-top: rem(18);
-  padding-left: rem(23);
+  margin-left: rem(23);
+  // padding-left: rem(23);
   @include mq("md") {
     margin-top: rem(18);
-    padding-left: rem(22);
+    margin-left: rem(22);
+    // padding-left: rem(22);
   }
 }
 
@@ -143,6 +154,7 @@
 
   @include mq("md") {
     margin-top: 0;
+    margin-left: rem(120);
   }
 }
 
@@ -167,7 +179,7 @@
 
 .footer-information__items {
   @include mq("md") {
-    margin-left: rem(120);
+    
   }
 }
 
@@ -181,11 +193,15 @@
 }
 
 .footer-information__list:not(:first-child) {
-  padding-top: rem(18);
-  padding-left: rem(22);
+  margin-top: rem(18);
+  margin-left: rem(22);
+  // padding-top: rem(18);
+  // padding-left: rem(22);
   @include mq("md") {
-    padding-left: rem(21);
-    padding-top: rem(18);
+    margin-top: rem(18);
+    margin-left: rem(21);
+    // padding-left: rem(21);
+    // padding-top: rem(18);
     // margin-top: rem(18.5);
   }
 }
@@ -206,7 +222,8 @@
 }
 
 .footer__blog span {
-  padding-left: rem(3);
+  margin-left: rem(3);
+  // padding-left: rem(3);
 }
 
 .footer__menu-right {
@@ -227,7 +244,8 @@
 }
 
 .footer__voice-link span {
-  padding-left: rem(3);
+  margin-left: rem(3);
+  // padding-left: rem(3);
 }
 
 .footer__voice:hover a {
@@ -241,7 +259,8 @@
 }
 
 .footer-price__items {
-  padding-top: rem(33);
+  margin-top: rem(33);
+  // padding-top: rem(33);
   // margin-top: rem(33);
   @include mq("md") {
     // padding-top: rem(35);
@@ -255,16 +274,19 @@
 }
 
 .footer-price__list-head span {
-  padding-left: rem(3);
+  margin-left: rem(3);
+  // padding-left: rem(3);
 }
 
 .footer-price__list:not(:first-child) {
-  padding-left: rem(22);
-  padding-top: rem(18);
-  // margin-top: rem(18);
+  margin-top: rem(18);
+  margin-left: rem(22);
+  // padding-left: rem(22);
+  // padding-top: rem(18);
 
   @include mq("md") {
-    padding-left: rem(20);
+    margin-left: rem(20);
+    // padding-left: rem(20);
     // padding-top: rem(19);
     // margin-top: rem(19);
   }
@@ -289,28 +311,26 @@
   font-weight: 700;
 }
 
-.footer-faq__list span {
-  padding-left: rem(3);
-}
-
-.footer-faq__list:hover a{
+.footer-faq__list:hover a {
   opacity: 0.5;
 }
 
 .footer-faq__list:not(:first-child) {
-  padding-top: rem(36);
-  // margin-top: rem(36);
+  margin-top: rem(36);
+  // padding-top: rem(36);
   @include mq("md") {
-    padding-top: rem(37);
-    // margin-top: rem(35);
+    margin-top: rem(37);
+    // padding-top: rem(37);
   }
 }
 
 .footer-faq__list span {
-  padding-left: rem(4);
+  margin-left: rem(4);
+  // padding-left: rem(4);
   line-height: 1.2;
   @include mq("md") {
-    padding-left: rem(2);
+    margin-left: rem(2);
+    // padding-left: rem(2);
   }
 }
 
@@ -336,35 +356,27 @@
 .footer-faq__list--flex img {
   display: block;
   height: 100%;
-  padding-bottom: rem(20);
+  margin-bottom: rem(20);
   @include mq("md") {
-    padding-bottom: rem(21);
+    margin-bottom: rem(20);
   }
 }
 
 .footer-faq__list:nth-of-type(3) {
   @include mq("md") {
-    padding-top: rem(16);
-  }
-}
-
-.footer-faq__list:nth-of-type(4) {
-  @include mq("md") {
-    padding-top: rem(34);
+    margin-top: rem(16);
   }
 }
 
 .footer__copyright {
   font-size: rem(12);
   color: $white;
-  padding-top: rem(35);
+  margin-top: rem(35);
   text-align: center;
   font-family: $second-font-family;
-  // margin-top: rem(35);
 
   @include mq("md") {
-    padding-top: rem(75);
+    margin-top: rem(75);
     font-size: rem(14);
-    // margin-top: rem(76);
   }
 }

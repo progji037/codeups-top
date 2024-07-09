@@ -1,33 +1,41 @@
 @use "global" as *;
 
-.price__wrapper {
-  padding-top: rem(80);
-  padding-bottom: rem(84);
+.price {
+  margin-top: rem(84);
   background-color: #ddf0f1;
-
   @include mq("md") {
-    padding-top: rem(100);
-    padding-bottom: rem(105);
+    margin-top: rem(144);
     position: relative;
   }
 }
 
-.price__inner {
-  padding-left: rem(15);
-  padding-right: rem(15);
-  max-width: rem(600);
-  width: 100%;
-  margin: 0 auto;
-  
+.price__wrapper {
   @include mq("md") {
-    max-width: rem(1110);
-    padding-right: rem(16);
+  }
+}
+
+.price__inner {
+  padding-top: rem(80);
+  padding-bottom: rem(84);
+  // padding-left: rem(15);
+  // padding-right: rem(15);
+  // max-width: rem(600);
+  // width: 100%;
+  // margin: 0 auto;
+
+  @include mq("md") {
+    padding-bottom: rem(105);
+    padding-top: rem(100);
+    // max-width: rem(1110);
+    // padding-right: rem(16);
   }
 }
 
 .price__header {
+  // margin-top: rem(80);
   text-align: center;
   @include mq("md") {
+    // margin-top: rem(100);
     padding-right: rem(5);
   }
 }
@@ -92,23 +100,23 @@
 
 .price__costs dt {
   font-size: rem(14);
-  padding-top: rem(8);
-  // margin-top: rem(8);
+  // padding-top: rem(8);
+  margin-top: rem(8);
   line-height: calc(24 / 14);
   width: calc(253 / 345 * 100%);
   @include mq("md") {
     font-size: rem(16);
     width: calc(300 / 492 * 100%);
     line-height: calc(24 / 16);
-    padding-top: rem(6);
-    // margin-top: rem(6);
+    // padding-top: rem(6);
+    margin-top: rem(6);
   }
 }
 
 .price__costs dd {
   font-size: rem(14);
-  padding-top: rem(8);
-  // margin-top: rem(8);
+  // padding-top: rem(8);
+  margin-top: rem(8);
   line-height: calc(24 / 14);
   width: calc(92 / 345 * 100%);
   text-align: right;
@@ -149,14 +157,14 @@
 }
 
 .price__link {
-  padding-top: rem(40);
   text-align: center;
-  // margin-top: rem(40);
+  margin-top: rem(40);
+  // padding-top: rem(40);
   // padding-right: rem(3);
 
   @include mq("md") {
-    padding-top: rem(80);
-    // margin-top: rem(77);
+    // padding-top: rem(80);
+    margin-top: rem(80);
   }
 }
 
@@ -167,6 +175,6 @@
     position: absolute;
     width: rem(437);
     bottom: rem(60);
-    left: calc(50% - min(43%, 39rem));
+    left: calc(50% - min(48%, 39rem));
   }
 }

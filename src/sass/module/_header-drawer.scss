@@ -5,12 +5,12 @@
 .header__drawer {
   position: fixed;
   width: rem(32);
-  height: inherit;
+  height: rem(80);
   display: inline-block;
   top: 0;
   right: 0;
   z-index: 31;
-  margin-top: rem(28);
+  // margin-top: rem(28);
   margin-right: rem(15);
   @include mq("md") {
     display: none;
@@ -27,15 +27,15 @@
 }
 
 .header__drawer span:nth-of-type(1) {
-  top: rem(0);
+  top: rem(27);
 }
 
 .header__drawer span:nth-of-type(2) {
-  top: rem(11);
+  top: rem(40);
 }
 
 .header__drawer span:nth-of-type(3) {
-  top: rem(23);
+  top: rem(51);
 }
 
 // active
@@ -59,29 +59,42 @@
   height: 100%;
   background-color: $green-blue;
   transform: translateX(100%);
-  padding-top: rem(21);
   top: 0;
   right: 0;
   z-index: 30;
+  overflow-y: scroll;
   transition: all 0.5s;
+  // padding-top: rem(21);
 }
 
 .header-drawer__menu.open {
   transform: translateZ(0);
 }
 
-.header-drawer__logo {
-  width: rem(117);
-  padding-left: rem(15);
+.header__drawer-top{
+  position: sticky;
+  display: flex;
+  width: 100%;
+  height: rem(80);
+  top: 0;
+  left: 0;
+  align-items: center;
+  background-color: $green-blue;
 }
+
+.header__drawer-logo {
+  width: rem(104);
+  margin-left: rem(14);
+}
+
 
 .header__menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   color: $white;
-  padding-top: rem(42);
-  padding-left: rem(16);
+  margin-top: rem(21);
+  // padding-top: rem(42);
 }
 
 .header__menu img {
@@ -126,7 +139,8 @@
 
 .header-campaign__list:not(:first-child) {
   margin-top: rem(18);
-  padding-left: rem(21);
+  margin-left: rem(21);
+  // padding-left: rem(21);
 }
 
 .header-campaign__list:hover {
@@ -148,8 +162,7 @@
   margin-left: rem(3);
 }
 
-
-.header__about:hover{
+.header__about:hover {
   opacity: 0.5;
 }
 
@@ -167,8 +180,9 @@
 }
 
 .header-information__list:not(:first-child) {
-  padding-left: rem(21);
   margin-top: rem(18);
+  margin-left: rem(21);
+  // padding-left: rem(21);
 }
 
 .header__blog {
@@ -186,12 +200,12 @@
 }
 
 .header__blog span {
-  padding-left: rem(3);
+  margin-left: rem(3);
+  // padding-left: rem(3);
 }
 
 .header__menu-right {
   margin-left: rem(6);
-
 }
 
 .header__voice {
@@ -203,7 +217,8 @@
 }
 
 .header__voice-link span {
-  padding-left: rem(5);
+  margin-left: rem(5);
+  // padding-left: rem(5);
   font-weight: 700;
 }
 
@@ -217,12 +232,14 @@
 }
 
 .header-price__list-head span {
-  padding-left: rem(5);
+  margin-left: rem(5);
+  // padding-left: rem(5);
 }
 
 .header-price__list:not(:first-child) {
-  padding-left: rem(23);
+  margin-left: rem(23);
   margin-top: rem(18);
+  // padding-left: rem(23);
 }
 
 .header__faq {
@@ -243,7 +260,8 @@
 }
 
 .header-faq__list span {
-  padding-left: rem(5);
+  margin-left: rem(5);
+  // padding-left: rem(5);
   font-weight: 700;
 }
 
@@ -259,5 +277,6 @@
 }
 
 .header-faq__list:not(:first-child) {
-  padding-top: rem(36);
+  margin-top: rem(36);
+  // padding-top: rem(36);
 }
