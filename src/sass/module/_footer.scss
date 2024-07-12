@@ -1,9 +1,6 @@
 @use "global" as *;
 .footer {
-  margin-top: rem(105);
-  @include mq("md") {
-    margin-top: rem(152);
-  }
+  
 }
 
 .footer__wrapper {
@@ -67,13 +64,15 @@
 .footer__menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   color: $white;
   margin-top: rem(38);
+  gap: rem(18);
   // padding-top: rem(38);
+  // justify-content: center;
 
   @include mq("md") {
     flex-wrap: nowrap;
+    gap: rem(122);
     margin-top: rem(22);
     justify-content: left;
   }
@@ -82,6 +81,7 @@
 .footer__menu-left {
   @include mq("md") {
     display: flex;
+    gap: rem(120);
   }
 }
 
@@ -134,27 +134,12 @@
   }
 }
 
-// .footer-campaign__list:nth-of-type(2) {
-//   padding-left: rem(18);
-//   @include mq('md') {
-
-//   }
-// }
-
-// .footer-campaign__list:nth-of-type(3) {
-//   padding-left: rem(18);
-// }
-
-// .footer-campaign__list:nth-of-type(4) {
-//   padding-left: rem(18);
-// }
-
-.footer__information {
+.footer-information {
   margin-top: rem(33);
 
   @include mq("md") {
     margin-top: 0;
-    margin-left: rem(120);
+    // margin-left: rem(120);
   }
 }
 
@@ -179,7 +164,6 @@
 
 .footer-information__items {
   @include mq("md") {
-    
   }
 }
 
@@ -195,14 +179,9 @@
 .footer-information__list:not(:first-child) {
   margin-top: rem(18);
   margin-left: rem(22);
-  // padding-top: rem(18);
-  // padding-left: rem(22);
   @include mq("md") {
     margin-top: rem(18);
     margin-left: rem(21);
-    // padding-left: rem(21);
-    // padding-top: rem(18);
-    // margin-top: rem(18.5);
   }
 }
 
@@ -227,9 +206,10 @@
 }
 
 .footer__menu-right {
-  margin-left: rem(17);
+  // margin-left: rem(17);
   @include mq("md") {
     display: flex;
+    gap: rem(122);
     margin-left: rem(0);
   }
 }
@@ -252,9 +232,9 @@
   opacity: 0.5;
 }
 
-.footer__price {
+.footer-price {
   @include mq("md") {
-    margin-left: rem(122);
+    // margin-left: rem(122);
   }
 }
 
@@ -296,12 +276,12 @@
   opacity: 0.5;
 }
 
-.footer__faq {
+.footer-faq {
   margin-top: rem(34);
 
   @include mq("md") {
     margin-top: rem(0);
-    margin-left: rem(122);
+    // margin-left: rem(122);
   }
 }
 
@@ -334,15 +314,6 @@
   }
 }
 
-.footer-faq__list--flex {
-  @include mq("md") {
-    display: flex;
-    align-items: center;
-    @include mq("md") {
-      align-items: initial;
-    }
-  }
-}
 
 .footer-faq__list--flex a {
   display: flex;
@@ -356,17 +327,22 @@
 .footer-faq__list--flex img {
   display: block;
   height: 100%;
-  margin-bottom: rem(20);
   @include mq("md") {
-    margin-bottom: rem(20);
   }
 }
 
-.footer-faq__list:nth-of-type(3) {
+.footer-faq__list:nth-of-type(2) {
+  align-items: flex-start;
   @include mq("md") {
-    margin-top: rem(16);
+    // margin-top: rem(16);
   }
 }
+
+// .footer-faq__list:nth-of-type(3) {
+//   @include mq("md") {
+//     margin-top: rem(16);
+//   }
+// }
 
 .footer__copyright {
   font-size: rem(12);

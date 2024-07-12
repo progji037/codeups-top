@@ -8,10 +8,10 @@
   height: rem(80);
   display: inline-block;
   top: 0;
-  right: 0;
+  right: rem(15);
   z-index: 31;
   // margin-top: rem(28);
-  margin-right: rem(15);
+  // margin-right: rem(15);
   @include mq("md") {
     display: none;
   }
@@ -94,7 +94,8 @@
   justify-content: center;
   color: $white;
   margin-top: rem(21);
-  // padding-top: rem(42);
+  padding-bottom: rem(48);
+
 }
 
 .header__menu img {
@@ -147,7 +148,7 @@
   opacity: 0.5;
 }
 
-.header__information {
+.header-information {
   margin-top: rem(34);
 }
 
@@ -254,11 +255,6 @@
 .header-faq__list a {
 }
 
-.header-faq__list-flex {
-  // flex-wrap: wrap;
-  // display: flex ;
-}
-
 .header-faq__list span {
   margin-left: rem(5);
   // padding-left: rem(5);
@@ -267,14 +263,14 @@
 
 .header-faq__list:nth-of-type(2) a {
   line-height: 1.18;
-  align-items: start;
   display: flex;
   flex-direction: column;
 }
-
-.header-faq__list:nth-of-type(2) img {
-  margin-bottom: rem(18);
+.header-faq__list:nth-of-type(2) {
+  line-height: 1.18;
+  align-items: flex-start;
 }
+
 
 .header-faq__list:not(:first-child) {
   margin-top: rem(36);

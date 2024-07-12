@@ -1,56 +1,50 @@
 @use "global" as *;
 
 .voice {
-  margin-top: rem(85);
   @include mq("md") {
-    margin-top: rem(146);
     position: relative;
   }
 }
 
-.voice__wrapper {
-  // padding-top: rem(85);
-  // padding-bottom: rem(84);
-  @include mq("md") {
-    // padding-top: rem(146);
-    // padding-bottom: rem(144);
-  }
-}
-
-.voice__inner {
-  // padding-left: rem(15);
-  // padding-right: rem(15);
-  // max-width: rem(600);
-  // width: 100%;
-  // margin: 0 auto;
-
-  @include mq("md") {
-    // max-width: rem(1110);
-    // width: 100%;
-    // margin: 0 auto;
-  }
-}
-
-.voice__decoration-top {
+.voice::before {
   display: none;
   @include mq("md") {
-    display: inline-block;
+    content: "";
+    display: block;
     width: rem(301);
+    height: rem(138);
     position: absolute;
     top: rem(-120);
-    left: calc(50% - min(48%, 39rem));
+    left: calc(50% - min(48%, 38.9rem));
+    background-image: url(/assets/images/common/_voice-キンギョハナダイ.png);
+    background-size: cover;
+
+  }
+}
+.voice::after {
+  display: none;
+  @include mq("md") {
+    content: "";
+    display: block;
+    width: rem(71);
+    height: rem(162);
+    position: absolute;
+    bottom: rem(-72);
+    right: calc(50% - min(48.5%, 33.7rem));
+    background-image: url(/assets/images/common/_voice-イバラタツ.png);
+    background-size: cover;
   }
 }
 
-.voice__decoration-under {
-  display: none;
-  @include mq("md") {
-    display: inline-block;
-    width: rem(71);
-    position: absolute;
-    bottom: rem(-72);
-    right: calc(50% - min(48.5%, 34rem));
-  }
+
+
+
+
+
+
+
+
+.voice__inner {
 }
 
 .voice__header {
@@ -69,7 +63,7 @@
   }
 }
 
-.voice__box {
+.voice-box {
   padding-top: rem(16);
   padding-right: rem(16);
   padding-left: rem(16);
@@ -82,7 +76,7 @@
   }
 }
 
-.voice__box:not(:first-child) {
+.voice-box:not(:first-child) {
   margin-top: rem(39);
   @include mq("md") {
     margin-top: 0;
@@ -91,19 +85,21 @@
 
 .voice-box__header {
   display: flex;
+  gap: rem(13);
   justify-content: center;
 
   @include mq("md") {
     justify-content: space-between;
+    gap: rem(16);
   }
 }
 
-.voice__titlebox {
+.voice-box__titlebox {
   // max-width: rem(149);
   width: 100%;
   @include mq("md") {
     // max-width: rem(276);
-    padding-right: rem(16);
+    // padding-right: rem(16);
     margin-top: rem(24);
   }
 }
@@ -151,9 +147,9 @@
 
 .voice-box__image {
   margin-top: rem(8);
-  margin-left: rem(13);
+  // margin-left: rem(13);
   max-width: rem(151);
-  width: 100%;
+  // width: 100%;
   @include mq("md") {
     max-width: rem(180);
     margin: 0;

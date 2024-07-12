@@ -1,15 +1,5 @@
 @use "global" as *;
 
-.campaign {
-  margin-top: rem(40);
-  @include mq("md") {
-    margin-top: rem(120);
-  }
-}
-
-.campaign__wrapper {
-}
-
 .campaign__inner {
   margin-left: rem(15);
 
@@ -150,14 +140,16 @@
 
 .campaign__slide {
   max-width: rem(280);
-  width: 100%;
+  // width: 100%;
   display: flex;
   height: auto;
+  margin-bottom: rem(4);
+  margin-left: rem(3);
 
   @include mq("md") {
     max-width: rem(333);
-    width: 100%;
     display: flex;
+    // width: 100%;
   }
 }
 
@@ -167,10 +159,9 @@
   margin-bottom: rem(4);
   display: flex; // 追加
   flex-direction: column; // 追加
-
+  height: 100%;
   @include mq("md") {
-    flex: 1;
-    height: auto;
+    // flex: 1;
     margin-bottom: rem(5);
     // margin-top: rem(28);
   }
@@ -198,21 +189,23 @@
   padding-bottom: rem(22);
   display: flex; // 追加
   flex-direction: column; // 追加
-  justify-content: space-between; // 追加
+  text-align: left;
+  flex: 1;
   // box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
 
   @include mq("md") {
     padding-top: rem(23);
     padding-bottom: rem(36);
     // box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-    height: auto;
+    // height: auto;
   }
 }
 
 .campaign-card__header {
-  border-bottom: solid 1px $green-blue;
   text-align: left;
-  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   @include mq("md") {
   }
 }
@@ -225,7 +218,7 @@
   border: solid 1px $green-blue;
   line-height: calc(22 / 12);
   letter-spacing: 0;
-
+  margin-right: auto;
   @include mq("md") {
     padding: rem(10) rem(15);
     line-height: 1;
@@ -238,11 +231,12 @@
   font-weight: 500;
   font-size: rem(16);
   margin-top: rem(4);
-  margin-bottom: rem(8);
+  padding-bottom: rem(8);
+  border-bottom: solid 1px $green-blue;
+  flex: 1;
 
   @include mq("md") {
     font-size: rem(16);
-    margin-bottom: rem(8);
   }
 }
 
@@ -256,7 +250,7 @@
     font-size: rem(16);
     margin-top: rem(14);
     // padding-top: rem(14);
-    margin-right: rem(16);
+    // margin-right: rem(16);
   }
 }
 

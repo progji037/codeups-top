@@ -1,64 +1,47 @@
 @use "global" as *;
 
-.blog {
-  margin-top: rem(80);
+.blog{
   @include mq("md") {
     position: relative;
-    margin-top: 0;
     padding-top: rem(100);
   }
+
 }
 
-.blog__backimage {
+.blog::after {
   display: none;
   @include mq("md") {
     display: block;
+    content: "";
     position: absolute;
     width: 100%;
     aspect-ratio: 1440/500;
     object-fit: cover;
     height: rem(500);
-    // background-image: url(/assets/images/common/blog-pc-back.jpg);
+    background-image: url(/assets/images/common/blog-pc-back.jpg);
     background-size: cover;
     top: 0;
     z-index: -1;
   }
 }
 
-.blog__wrapper {
-  @include mq("md") {
-  }
-}
-
-.blog__inner {
-  // padding-top: rem(80);
-  padding-left: rem(21);
-  padding-right: rem(21);
-  // max-width: rem(600);
-  // width: 100%;
-  // margin: 0 auto;
-
-  @include mq("md") {
-    // padding-top: rem(100);
-    // max-width: rem(1182);
-    // width: 100%;
-    // margin: 0 auto;
-    // padding-left: rem(25);
-    // padding-right: rem(25);
-  }
-}
-
-.blog__decoration {
+.blog__inner::before {
   display: none;
   @include mq("md") {
+    content: "";
+    background-image: url(/assets/images/common/_blog-キンギョハナダイ.png);
+    background-size: cover;
     display: inline-block;
     position: absolute;
     top: rem(25);
-    max-width: rem(437);
-    width: 100%;
+    width: rem(437);
+    height: rem(201);
     left: calc(50% - min(48%, 39rem));
   }
 }
+
+
+
 
 .blog__header {
   text-align: center;
@@ -76,18 +59,18 @@
     // flex-wrap: wrap;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, rem(333));
+    grid-template-columns: repeat(3, 1fr);
     row-gap: rem(40);
     column-gap: rem(40);
     margin-top: rem(80);
   }
 }
 
-.blog__card a:hover {
+.blog-card a:hover {
   opacity: 0.5;
 }
 
-.blog__card {
+.blog-card {
   margin-top: rem(28);
   padding-top: rem(16);
   padding-right: rem(16);
@@ -99,11 +82,11 @@
   @include mq("md") {
     margin-top: 0;
     max-width: rem(333);
-    width: 100%;
+    // width: 100%;
   }
 }
 
-.blog__card:not(:first-child) {
+.blog-card:not(:first-child) {
   margin-top: rem(40);
   @include mq("md") {
     margin-top: 0;
