@@ -1,5 +1,6 @@
 @use "global" as *;
 
+
 .fv__wrapper {
   height: 100vh;
   // height: 100%;
@@ -29,7 +30,7 @@
   text-align: center;
   font-size: 18px;
   // background: #fff;
-  background-color: transparent;
+  // background-color: transparent;
   display: block;
   // display: flex;
   // justify-content: center;
@@ -45,7 +46,7 @@
   text-align: center;
   z-index: 19;
   color: #408f95;
-  animation: fadeInOut 2.8s forwards; /* 7秒から10秒に変更 */
+  animation: fadeInOut 2.8s forwards;
 
   @include mq("md") {
     top: 50%;
@@ -74,6 +75,7 @@
     color: #ffffff;
   }
 }
+
 
 .fv__main-title {
   //   padding-left: rem(20);
@@ -124,7 +126,7 @@
   height: 100vh;
   overflow: hidden; /* 追加 */
   background-color: transparent;
-  animation: out 3s forwards;
+  animation: out 2.8s forwards;
   z-index: 18;
 }
 
@@ -133,12 +135,18 @@
   80% {
     opacity: 1;
   }
-  90% {
-    opacity: 0;
-  }
   100% {
     display: none;
-    opacity: 0;
+  }
+}
+
+
+@keyframes fadeBackground {
+  0% {
+    background-color: transparent; // 初期の背景色
+  }
+  100% {
+    background-color: transparent;
   }
 }
 
@@ -179,6 +187,7 @@
     opacity: 1;
   }
 }
+
 
 .fv-loading__split {
   position: relative;
@@ -226,4 +235,8 @@
 
 .fade-out {
   opacity: 0;
+}
+
+.transparent-background {
+  background-color: transparent !important;
 }

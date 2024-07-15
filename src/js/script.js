@@ -36,17 +36,17 @@ $(function () {
 
 /* .fv
 -------------------------------------------------------------*/
-
 const swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 1,
   loot: true,
   effect: "fade",
-  speed: 1000,
+  speed: 3000,
   autoplay: {
     // 自動再生
-    delay: 2500, // 2.5秒後に次のスライド
+    delay: 3000, // 2.5秒後に次のスライド
   },
 });
+
 
 /* .campaign
 -------------------------------------------------------------*/
@@ -145,7 +145,7 @@ $(document).ready(function () {
   var $targetElement = $(".fade-out-target");
 
   // 指定の秒数（ミリ秒）後にフェードアウトさせる
-  var delay = 3000; // 3000ミリ秒（3秒）
+  var delay = 2800; // 3000ミリ秒（3秒）
 
   setTimeout(function () {
     $targetElement.addClass("fade-out");
@@ -153,6 +153,6 @@ $(document).ready(function () {
     // フェードアウト後に非表示にする
     setTimeout(function () {
       $targetElement.fadeOut();
-    }, 2500); // フェードアウトアニメーションの時間と同じにする
+    }, 2800); // フェードアウトアニメーションの時間と同じにする
   }, delay);
 });
