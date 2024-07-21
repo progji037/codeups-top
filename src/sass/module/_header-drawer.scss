@@ -60,18 +60,20 @@
   height: 100%;
   background-color: $green-blue;
   // transform: translateX(100%);
-  opacity: 0;
+  visibility: hidden;
   top: 0;
   right: 0;
   z-index: 30;
   overflow-y: scroll;
   transition: all 0.5s;
+  opacity: 0;
   // padding-top: rem(21);
 }
 
 .header-drawer.open {
   transform: translateZ(0);
   opacity: 1;
+  visibility: visible;
 }
 
 .header-drawer__head {
