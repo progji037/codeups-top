@@ -54,12 +54,13 @@
   width: rem(40);
 }
 
-.header-drawer__menu {
+.header-drawer {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: $green-blue;
-  transform: translateX(100%);
+  // transform: translateX(100%);
+  opacity: 0;
   top: 0;
   right: 0;
   z-index: 30;
@@ -68,11 +69,12 @@
   // padding-top: rem(21);
 }
 
-.header-drawer__menu.open {
+.header-drawer.open {
   transform: translateZ(0);
+  opacity: 1;
 }
 
-.header__drawer-top {
+.header-drawer__head {
   position: sticky;
   width: 100%;
   height: rem(80);
@@ -83,7 +85,7 @@
 }
 
 
-.header__menu {
+.header-drawer__guide {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -93,179 +95,157 @@
 
 }
 
-.header__menu img {
-  width: rem(18);
-  height: rem(18);
-}
-
-.header__menu h3 {
-  font-size: rem(16);
-}
-
-.header__logo {
-  width: rem(120);
-  height: rem(40);
-}
-
-.header__sns-icon {
-  display: flex;
-}
-
-.header__sns-facebook {
-  width: rem(24);
-  height: rem(24);
-}
-
-.header__sns-instagram {
-  width: rem(24);
-  height: rem(24);
-}
-
-.header-campaign__list-head {
-  display: flex;
-  align-items: center;
-}
-
-.header-campaign__list-head a {}
-
-.header-campaign__list-head span {
-  margin-left: rem(4);
-}
-
-.header-campaign__list:not(:first-child) {
-  margin-top: rem(18);
-  margin-left: rem(21);
-  // padding-left: rem(21);
-}
-
-.header-campaign__list:hover {
-  opacity: 0.5;
-}
-
-.header-information {
-  margin-top: rem(34);
-}
-
-.header__about {
-  display: flex;
-  align-items: center;
-  margin-top: rem(34);
-  font-weight: 700;
-}
-
-.header__about a {
-  margin-left: rem(3);
-}
-
-.header__about:hover {
-  opacity: 0.5;
-}
-
-.header-information__list-head {
-  display: flex;
-  align-items: center;
-}
-
-.header-information__list-head a {
-  margin-left: rem(3);
-}
-
-.header-information__list:hover {
-  opacity: 0.5;
-}
-
-.header-information__list:not(:first-child) {
-  margin-top: rem(18);
-  margin-left: rem(21);
-  // padding-left: rem(21);
-}
-
-.header__blog {
-  margin-top: rem(34);
-  font-weight: 700;
-}
-
-.header__blog-link {
-  display: flex;
-  align-items: center;
-}
-
-.header__blog-link:hover {
-  opacity: 0.5;
-}
-
-.header__blog span {
-  margin-left: rem(3);
-  // padding-left: rem(3);
-}
-
-.header__menu-right {
-  margin-left: rem(6);
-}
-
-.header__voice {
-  display: flex;
-  align-items: center;
-}
-
-.header__voice-link {}
-
-.header__voice-link span {
-  margin-left: rem(5);
-  // padding-left: rem(5);
-  font-weight: 700;
-}
-
-.header-price__items {
-  margin-top: rem(34);
-}
-
-.header-price__list-head {
-  display: flex;
-  align-items: center;
-}
-
-.header-price__list-head span {
-  margin-left: rem(5);
-  // padding-left: rem(5);
-}
-
-.header-price__list:not(:first-child) {
-  margin-left: rem(23);
-  margin-top: rem(18);
-  // padding-left: rem(23);
-}
-
-.header__faq {
-  margin-top: rem(34);
-}
-
-.header-faq__list {
-  display: flex;
-  align-items: center;
-}
-
-.header-faq__list a {}
-
-.header-faq__list span {
-  margin-left: rem(5);
-  // padding-left: rem(5);
-  font-weight: 700;
-}
-
-.header-faq__list:nth-of-type(2) a {
-  line-height: 1.18;
-  display: flex;
-  flex-direction: column;
-}
-
-.header-faq__list:nth-of-type(2) {
-  line-height: 1.18;
-  align-items: flex-start;
-}
+// .header-drawer__menu img {
+//   width: rem(18);
+//   height: rem(18);
+// }
 
 
-.header-faq__list:not(:first-child) {
-  margin-top: rem(36);
-  // padding-top: rem(36);
-}
+// .header-campaign__list-head {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header-campaign__list-head a {}
+
+// .header-campaign__list-head span {
+//   margin-left: rem(4);
+// }
+
+// .header-campaign__list:not(:first-child) {
+//   margin-top: rem(18);
+//   margin-left: rem(21);
+//   // padding-left: rem(21);
+// }
+
+// .header-campaign__list:hover {
+//   opacity: 0.5;
+// }
+
+// .header-information {
+//   margin-top: rem(34);
+// }
+
+// .header__about {
+//   display: flex;
+//   align-items: center;
+//   margin-top: rem(34);
+//   font-weight: 700;
+// }
+
+// .header__about a {
+//   margin-left: rem(3);
+// }
+
+// .header__about:hover {
+//   opacity: 0.5;
+// }
+
+// .header-information__list-head {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header-information__list-head a {
+//   margin-left: rem(3);
+// }
+
+// .header-information__list:hover {
+//   opacity: 0.5;
+// }
+
+// .header-information__list:not(:first-child) {
+//   margin-top: rem(18);
+//   margin-left: rem(21);
+//   // padding-left: rem(21);
+// }
+
+// .header__blog {
+//   margin-top: rem(34);
+//   font-weight: 700;
+// }
+
+// .header__blog-link {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header__blog-link:hover {
+//   opacity: 0.5;
+// }
+
+// .header__blog span {
+//   margin-left: rem(3);
+//   // padding-left: rem(3);
+// }
+
+// .header__menu-right {
+//   margin-left: rem(6);
+// }
+
+// .header__voice {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header__voice-link {}
+
+// .header__voice-link span {
+//   margin-left: rem(5);
+//   // padding-left: rem(5);
+//   font-weight: 700;
+// }
+
+// .header-price__items {
+//   margin-top: rem(34);
+// }
+
+// .header-price__list-head {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header-price__list-head span {
+//   margin-left: rem(5);
+//   // padding-left: rem(5);
+// }
+
+// .header-price__list:not(:first-child) {
+//   margin-left: rem(23);
+//   margin-top: rem(18);
+//   // padding-left: rem(23);
+// }
+
+// .header__faq {
+//   margin-top: rem(34);
+// }
+
+// .header-faq__list {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header-faq__list a {}
+
+// .header-faq__list span {
+//   margin-left: rem(5);
+//   // padding-left: rem(5);
+//   font-weight: 700;
+// }
+
+// .header-faq__list:nth-of-type(2) a {
+//   line-height: 1.18;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .header-faq__list:nth-of-type(2) {
+//   line-height: 1.18;
+//   align-items: flex-start;
+// }
+
+
+// .header-faq__list:not(:first-child) {
+//   margin-top: rem(36);
+//   // padding-top: rem(36);
+// }

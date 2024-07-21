@@ -1,10 +1,6 @@
 @use "global" as *;
 
-.section__title {
-  text-align: center;
-}
-
-.section__maintitle {
+.section-title__main {
   font-weight: normal;
   font-family: $second-font-family;
   font-weight: regular;
@@ -17,42 +13,68 @@
   }
 }
 
-.section__maintitle::first-letter {
+.section-title__main--white {
+  font-weight: normal;
+  font-family: $second-font-family;
+  font-weight: regular;
+  font-size: rem(32);
+  line-height: calc(40 / 32);
+  color: #fff;
+
+  @include mq("md") {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+
+
+.section-title__main::first-letter {
   color: $font-accent-color;
 }
 
-.section__subtitle {
+.section-title__main-white::first-letter {
+  color: $font-accent-color;
+
+  @include mq('md') {
+    color: #fff;
+  }
+}
+
+
+
+.section-title__sub {
   color: $font-accent-color;
   font-size: rem(12);
   line-height: calc(18 / 12);
   margin-top: rem(4);
-  
+
   @include mq("md") {
     margin-top: rem(8);
   }
 }
 
-.section__maintitle-white {
+.section-title__main-white {
   font-weight: normal;
   font-family: $second-font-family;
   font-weight: regular;
   font-size: rem(32);
   line-height: calc(40 / 32);
-  color: #fff;
 
   @include mq("md") {
+    color: #fff;
     font-size: rem(40);
     line-height: 1;
   }
 }
 
-.section__subtitle-white {
-  color: #fff;
+.section-title__sub-white {
   font-size: rem(12);
   line-height: calc(18 / 12);
   margin-top: rem(4);
 
   @include mq("md") {
+    color: #fff;
     margin-top: rem(8);
   }
 }

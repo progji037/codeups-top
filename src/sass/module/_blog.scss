@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog{
+.blog {
   @include mq("md") {
     position: relative;
     padding-top: rem(100);
@@ -10,6 +10,7 @@
 
 .blog::after {
   display: none;
+
   @include mq("md") {
     display: block;
     content: "";
@@ -27,6 +28,7 @@
 
 .blog__inner::before {
   display: none;
+
   @include mq("md") {
     content: "";
     background-image: url(/assets/images/common/_blog-キンギョハナダイ.png);
@@ -45,13 +47,15 @@
 
 .blog__header {
   text-align: center;
+
   // margin-top: rem(80);
   @include mq("md") {
     // margin-top: rem(100);
   }
 }
 
-.blog__cards {
+.cards {
+
   // margin-inline: rem(6);
   @include mq("md") {
     // margin-inline:0;
@@ -62,15 +66,21 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: rem(40);
     column-gap: rem(40);
+  }
+}
+
+.blog__cards {
+  margin-top: rem(24);
+  @include mq('md') {
     margin-top: rem(80);
   }
 }
 
-.blog-card a:hover {
+.cards__item a:hover {
   opacity: 0.5;
 }
 
-.blog-card {
+.cards__item {
   // margin-top: rem(28);
   padding-top: rem(16);
   padding-right: rem(16);
@@ -86,19 +96,20 @@
   }
 }
 
-.blog-card:not(:first-child) {
+.cards__item:not(:first-child) {
   margin-top: rem(40);
+
   @include mq("md") {
     margin-top: 0;
   }
 }
 
-.blog-card__figure img {
+.card__figure img {
   aspect-ratio: 301/201;
   object-fit: cover;
 }
 
-.blog-card__header {
+.card__header {
   margin-top: rem(24);
 }
 
@@ -116,8 +127,10 @@
   }
 }
 
+
 .blog__title::first-letter {
   color: $font-accent-color;
+
   @include mq("md") {
     color: #ffffff;
   }
@@ -129,24 +142,24 @@
   }
 }
 
-.blog-card__date {
+.card__date {
   font-size: rem(12);
   line-height: calc(18 / 12);
   font-family: $second-font-family;
 }
 
-.blog-card__heading {
+.card__heading {
   line-height: calc(24 / 16);
   font-weight: 600;
   padding-bottom: rem(4);
   border-bottom: solid 1px $green-blue;
 }
 
-.blog-card__body {
+.card__body {
   margin-top: rem(15);
 }
 
-.blog-card__text {
+.card__text {
   font-weight: 500;
 }
 

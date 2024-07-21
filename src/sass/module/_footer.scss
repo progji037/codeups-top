@@ -1,358 +1,80 @@
 @use "global" as *;
-.footer {
-  
-}
 
-.footer__wrapper {
-  background-color: $green-blue;
-  // background-color: $green-blue;
+.footer {
   padding-top: rem(48);
   padding-bottom: rem(56);
+  background-color: $green-blue;
 
-  @include mq("md") {
+  @include mq('md') {
     padding-top: rem(80);
-    padding-bottom: rem(80);
   }
 }
 
-.footer__inner {
-  // padding-left: rem(15);
+.footer__wrapper {}
 
-  @include mq("md") {
-    // max-width: rem(1080);
-    // width: 100%;
-    // margin: 0 auto;
-    // padding-left: 0;
+.footer__inner {}
+
+
+.footer__headline {
+
+  @include mq('md') {
+    display: flex;
+    gap: rem(43);
+    align-items: end;
+
+  }
+}
+
+.footer__logo {}
+
+.footer__logo img {
+  width: rem(120);
+
+  @include mq('md') {
+    width: rem(200);
+
   }
 }
 
 .footer__sns-icon {
-  margin-top: rem(21);
   display: flex;
-  @include mq("md") {
-    margin-left: rem(40);
-    margin-top: 0;
+  gap: rem(16);
+  margin-top: rem(18.25);
+
+  @include mq('md') {
+    gap: rem(19);
+
   }
 }
 
-.footer__headline {
-  @include mq("md") {
-    display: flex;
-  }
-}
+.footer__sns-icon img {
+  width: rem(20);
 
-.footer__sns-facebook {
-  width: rem(24);
-  height: rem(24);
-  @include mq("md") {
+  @include mq('md') {
     width: rem(32);
-    margin-top: rem(38);
   }
 }
 
-.footer__sns-instagram {
-  margin-left: rem(17);
-  width: rem(24);
-  height: rem(24);
-  @include mq("md") {
-    width: rem(32);
-    margin-top: rem(38);
-    margin-left: rem(16);
+.footer__sns-facebook {}
+
+.footer__sns-instagram {}
+
+.footer__menu{
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(29);
+
   }
 }
-
-.footer__menu {
-  display: flex;
-  flex-wrap: wrap;
-  color: $white;
-  margin-top: rem(38);
-  gap: rem(18);
-  // padding-top: rem(38);
-  // justify-content: center;
-
-  @include mq("md") {
-    flex-wrap: nowrap;
-    gap: rem(122);
-    margin-top: rem(22);
-    justify-content: left;
-  }
-}
-
-.footer__menu-left {
-  @include mq("md") {
-    display: flex;
-    gap: rem(120);
-  }
-}
-
-.footer__menu img {
-  width: rem(18);
-  height: rem(18);
-}
-
-.footer__menu h3 {
-  font-size: rem(16);
-}
-
-.footer__logo {
-  width: rem(120);
-  height: rem(40);
-
-  @include mq("md") {
-    width: rem(200);
-    height: rem(75);
-  }
-}
-
-.footer-campaign__items {
-  @include mq("md") {
-    // padding-left: rem(5);
-  }
-}
-
-.footer-campaign__list-title {
-  display: flex;
-  align-items: center;
-}
-
-.footer-campaign__list:hover a {
-  opacity: 0.5;
-}
-
-.footer-campaign__list-head span {
-  margin-left: rem(3);
-}
-
-.footer-campaign__list:not(:first-child) {
-  margin-top: rem(18);
-  margin-left: rem(23);
-  // padding-left: rem(23);
-  @include mq("md") {
-    margin-top: rem(18);
-    margin-left: rem(22);
-    // padding-left: rem(22);
-  }
-}
-
-.footer-information {
-  margin-top: rem(33);
-
-  @include mq("md") {
-    margin-top: 0;
-    // margin-left: rem(120);
-  }
-}
-
-.footer__about a {
-  display: flex;
-  align-items: center;
-  margin-top: rem(34);
-  font-weight: 700;
-
-  @include mq("md") {
-    margin-top: rem(34);
-  }
-}
-
-.footer__about:hover a {
-  opacity: 0.5;
-}
-
-.footer__about p {
-  margin-left: rem(3);
-}
-
-.footer-information__items {
-  @include mq("md") {
-  }
-}
-
-.footer-information__list-head {
-  display: flex;
-  align-items: center;
-}
-
-.footer-information__list-head span {
-  margin-left: rem(3);
-}
-
-.footer-information__list:not(:first-child) {
-  margin-top: rem(18);
-  margin-left: rem(22);
-  @include mq("md") {
-    margin-top: rem(18);
-    margin-left: rem(21);
-  }
-}
-
-.footer-information__list:hover a {
-  opacity: 0.5;
-}
-
-.footer__blog {
-  display: flex;
-  align-items: center;
-  margin-top: rem(33);
-  font-weight: 700;
-}
-
-.footer__blog-link :hover {
-  opacity: 0.5;
-}
-
-.footer__blog span {
-  margin-left: rem(3);
-  // padding-left: rem(3);
-}
-
-.footer__menu-right {
-  // margin-left: rem(17);
-  @include mq("md") {
-    display: flex;
-    gap: rem(122);
-    margin-left: rem(0);
-  }
-}
-
-.footer__voice {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-}
-
-.footer__voice-link {
-}
-
-.footer__voice-link span {
-  margin-left: rem(3);
-  // padding-left: rem(3);
-}
-
-.footer__voice:hover a {
-  opacity: 0.5;
-}
-
-.footer-price {
-  @include mq("md") {
-    // margin-left: rem(122);
-  }
-}
-
-.footer-price__items {
-  margin-top: rem(33);
-  // padding-top: rem(33);
-  // margin-top: rem(33);
-  @include mq("md") {
-    // padding-top: rem(35);
-    // margin-top: rem(35);
-  }
-}
-
-.footer-price__list-head {
-  display: flex;
-  align-items: center;
-}
-
-.footer-price__list-head span {
-  margin-left: rem(3);
-  // padding-left: rem(3);
-}
-
-.footer-price__list:not(:first-child) {
-  margin-top: rem(18);
-  margin-left: rem(22);
-  // padding-left: rem(22);
-  // padding-top: rem(18);
-
-  @include mq("md") {
-    margin-left: rem(20);
-    // padding-left: rem(20);
-    // padding-top: rem(19);
-    // margin-top: rem(19);
-  }
-}
-
-.footer-price__list:hover a {
-  opacity: 0.5;
-}
-
-.footer-faq {
-  margin-top: rem(34);
-
-  @include mq("md") {
-    margin-top: rem(0);
-    // margin-left: rem(122);
-  }
-}
-
-.footer-faq__list {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-}
-
-.footer-faq__list:hover a {
-  opacity: 0.5;
-}
-
-.footer-faq__list:not(:first-child) {
-  margin-top: rem(36);
-  // padding-top: rem(36);
-  @include mq("md") {
-    margin-top: rem(37);
-    // padding-top: rem(37);
-  }
-}
-
-.footer-faq__list span {
-  margin-left: rem(4);
-  // padding-left: rem(4);
-  line-height: 1.2;
-  @include mq("md") {
-    margin-left: rem(2);
-    // padding-left: rem(2);
-  }
-}
-
-
-.footer-faq__list--flex a {
-  display: flex;
-  flex-direction: column;
-
-  @include mq("md") {
-    flex-direction: row;
-  }
-}
-
-.footer-faq__list--flex img {
-  display: block;
-  height: 100%;
-  @include mq("md") {
-  }
-}
-
-.footer-faq__list:nth-of-type(2) {
-  align-items: flex-start;
-  @include mq("md") {
-    // margin-top: rem(16);
-  }
-}
-
-// .footer-faq__list:nth-of-type(3) {
-//   @include mq("md") {
-//     margin-top: rem(16);
-//   }
-// }
 
 .footer__copyright {
   font-size: rem(12);
-  color: $white;
-  margin-top: rem(35);
+  margin-top: rem(40);
   text-align: center;
+  color: #fff;
   font-family: $second-font-family;
 
-  @include mq("md") {
-    margin-top: rem(75);
+  @include mq('md') {
     font-size: rem(14);
   }
 }

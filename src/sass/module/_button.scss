@@ -1,144 +1,5 @@
 @use "global" as *;
 
-// // .button {
-// //   display: inline-block;
-// //   max-width: rem(202);
-// //   width: 100%;
-// //   font-size: rem(14);
-// //   line-height: 1;
-// //   font-family: $second-font-family;
-// //   padding-top: rem(20);
-// //   padding-bottom: rem(20);
-// //   padding-left: rem(40);
-// //   background-color: $green-blue;
-// //   color: #fff;
-// //   position: relative;
-// // }
-
-// // .button::before {
-// //   content: "";
-// //   position: absolute;
-// //   width: rem(202);
-// //   height: rem(54);
-// //   border: solid 1px #408f95;
-// //   top: rem(4);
-// //   left: rem(4);
-// // }
-
-// // .button-link {
-// //   display: flex;
-// //   // align-items: center;
-// // }
-
-// // .button-arrow.button-head{
-// //   width: rem(40);
-// //   height: rem(6);
-// //   border-right: 1px solid #fff;
-// //   border-bottom: 1px solid #fff;
-// //   transform: skew(45deg);
-// //   margin-left: rem(6);
-// //   margin-top: rem(2);
-// // }
-
-// /* .
-// -------------------------------------------------------------*/
-// // ボタン
-// // <div class="c-btn">button</div>
-
-// // .c-btn.slide {
-// //   background: #fff;
-// //   color: #ff701e;
-// //   overflow: hidden;
-// //   position: relative;
-// //   z-index: 1;
-// // }
-// // .c-btn.slide::after {
-// //   background: #ff701e;
-// //   position: absolute;
-// //   top: 0;
-// //   left: 0;
-// //   content: '';
-// //   width: 100%;
-// //   height: 100%;
-// //   transform: scale(0, 1);
-// //   transform-origin: left top;
-// //   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-// //   z-index: -1;
-// // }
-// // .c-btn.slide:hover {
-// //   color: #fff;
-// // }
-// // .c-btn.slide:hover::after {
-// //   transform: scale(1, 1);
-// // }
-
-// .button {
-//   display: inline-block;
-//   max-width: rem(202);
-//   width: 100%;
-//   font-size: rem(14);
-//   line-height: 1;
-//   font-family: $second-font-family;
-//   padding-top: rem(20);
-//   padding-bottom: rem(20);
-//   padding-left: rem(40);
-//   background-color: $green-blue;
-//   color: #fff;
-//   position: relative;
-// }
-
-// .button::before {
-//   content: "";
-//   position: absolute;
-//   width: rem(202);
-//   height: rem(54);
-//   border: solid 1px #408f95;
-//   top: rem(4);
-//   left: rem(4);
-// }
-
-// .button-link {
-//   display: flex;
-//   // align-items: center;
-// }
-
-// .button-arrow.button-head{
-//   width: rem(40);
-//   height: rem(6);
-//   border-right: 1px solid #fff;
-//   border-bottom: 1px solid #fff;
-//   transform: skew(45deg);
-//   margin-left: rem(6);
-//   margin-top: rem(2);
-// }
-
-// .button.slide {
-//   background: #fff;
-//   color: #ff701e;
-//   overflow: hidden;
-//   position: relative;
-//   z-index: 1;
-// }
-// .button.slide::after {
-//   background: #ff701e;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   content: '';
-//   width: 100%;
-//   height: 100%;
-//   transform: scale(0, 1);
-//   transform-origin: left top;
-//   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-//   z-index: -1;
-// }
-// .button.slide:hover {
-//   color: #fff;
-// }
-// .button.slide:hover::after {
-//   transform: scale(1, 1);
-// }
-
 .button {
   font-family: $second-font-family;
   color: #ffffff;
@@ -152,6 +13,7 @@
   transition: all 0.3s;
 }
 
+
 .button-area {
   display: inline-block;
   text-align: inherit;
@@ -161,19 +23,6 @@
   padding-right: rem(50);
 }
 
-.button-initial {
-  display: inline-block;
-  text-align: left;
-  width: rem(200);
-  height: rem(51);
-  padding-top: rem(16);
-  padding-left: rem(41);
-
-  @include mq("md") {
-    padding-left: rem(38);
-    padding-right: rem(5);
-  }
-}
 
 .button::before {
   content: "";

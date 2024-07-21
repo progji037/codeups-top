@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.site-guide {
+  display: flex;
+  color: $white;
+  // margin-top: rem(38);
+  gap: rem(18);
+  justify-content: center;
+
+  @include mq("md") {
+    flex-wrap: nowrap;
+    gap: rem(122);
+    // margin-top: rem(22);
+    justify-content: left;
+  }
+}
+
+.site-guide__group {
+  @include mq("md") {
+    display: flex;
+    gap: rem(120);
+  }
+}
+
+.site-guide__group-flex a{
+  display: flex;
+  flex-direction: column;
+  @include mq('md') {
+    flex-direction: row;
+
+  }
+}
+
+.site-guide__group-box {
+}
+
+.site-guide__group-box--space{
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: 0;
+
+  }
+}
+
+.site-guide__group-lists {
+}
+
+.site-guide__group-list {
+  margin-left: rem(20);
+}
+
+.site-guide__group-list:hover a {
+  opacity: 0.5;
+}
+
+.site-guide__list-space {
+  margin-top: rem(18);
+}
+
+.site-guide__group-subject {
+  position: relative;
+  font-weight: 700;
+}
+
+.site-guide__group-subject a {
+  margin-left: rem(20);
+}
+
+.site-guide__group-subject:hover a {
+  opacity: 0.5;
+}
+
+.site-guide__group-subject::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: rem(3);
+  left: 0;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(/assets/images/common/ヒトデ-sp.png);
+  background-size: cover;
+}
+
+.site-guide__group-space {
+  margin-top: rem(40);
+}

@@ -3,16 +3,16 @@ jQuery(function ($) {
   $(".header__drawer").on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
-      $(".header-drawer__menu").removeClass("open");
+      $(".header-drawer").removeClass("open");
     } else {
       $(this).addClass("active");
-      $(".header-drawer__menu").addClass("open");
+      $(".header-drawer").addClass("open");
     }
     // ウィンドウのリサイズを監視し、幅が768px以上の場合はドロワーメニューを閉じる
     $(window).on("resize", function () {
       if ($(window).width() > 767) {
         $(".header__drawer").removeClass("active");
-        $(".header-drawer__menu").removeClass("open");
+        $(".header-drawer").removeClass("open");
       }
     });
   });
@@ -36,9 +36,9 @@ $(function () {
 
 /* .fv
 -------------------------------------------------------------*/
-const swiper2 = new Swiper(".mySwiper2", {
+const fvswiper = new Swiper(".js-fv-swiper", {
   slidesPerView: 1,
-  loot: true,
+  loop: true,
   effect: "fade",
   speed: 3000,
   autoplay: {
@@ -51,7 +51,7 @@ const swiper2 = new Swiper(".mySwiper2", {
 /* .campaign
 -------------------------------------------------------------*/
 
-const swiper1 = new Swiper(".js-top-swiper", {
+const camswiper = new Swiper(".js-top-swiper", {
   slidesPerView: "auto",
   spaceBetween: 24,
   loop: true,
@@ -145,7 +145,7 @@ $(document).ready(function () {
   var $targetElement = $(".fade-out-target");
 
   // 指定の秒数（ミリ秒）後にフェードアウトさせる
-  var delay = 2800; // 3000ミリ秒（3秒）
+  var delay = 3000; // 3000ミリ秒（3秒）
 
   setTimeout(function () {
     $targetElement.addClass("fade-out");
@@ -153,6 +153,6 @@ $(document).ready(function () {
     // フェードアウト後に非表示にする
     setTimeout(function () {
       $targetElement.fadeOut();
-    }, 2800); // フェードアウトアニメーションの時間と同じにする
+    }, 3000); // フェードアウトアニメーションの時間と同じにする
   }, delay);
 });
